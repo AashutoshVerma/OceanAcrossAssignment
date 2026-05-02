@@ -1,0 +1,49 @@
+# Terraform
+
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# Terraform plan files
+
+*.tfplan
+
+# AWS / credentials
+
+*.pem
+*.key
+*.pub
+.env
+.env.*
+
+# Logs
+
+*.log
+
+# OS / Editor junk
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python (if any backend)
+
+**pycache**/
+*.pyc
+
+# Node (if any frontend/tools)
+
+node_modules/
+
+# Build / temp
+
+dist/
+build/
+tmp/
