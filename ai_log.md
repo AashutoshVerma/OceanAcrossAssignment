@@ -27,3 +27,9 @@ Entry 5
 - What was modified and why: Small fixes to ensure reliable Terraform runs and clearer configuration for future contributors.
 
 Note: This log reflects an iterative workflow where AI was used for scaffolding, targeted feature additions, security hardening, and final validation steps.
+
+Entry 6 - 
+- Prompt: "Record monitoring additions and scaffolding across Terraform and repo."
+- Response summary: Added monitoring scaffolding including a `monitoring` Terraform module with CloudWatch metric filters, example alarms, dashboard JSON templates, and SNS topics for alerting. Introduced IAM roles/policies required for metrics/alarms and updated module outputs to expose alarm ARNs, dashboard IDs, and SNS topic ARNs. Added example alerting rules and a sample dashboard under `modules/monitoring` and referenced the module in `terraform/environments/dev` for a dev monitoring stack.
+- What was modified and why: Provides the initial observability foundation: metrics collection, alerting channels, and dashboards so teams can validate runtime health and set SLO/alert thresholds. IAM updates ensure monitoring components can read metrics and publish notifications securely.
+- Next steps: Tune alarm thresholds, connect SNS endpoints to on-call or PagerDuty, add dashboards for RDS/EC2/S3 metrics, and add CI checks to validate dashboard JSON and Terraform plan outputs.
